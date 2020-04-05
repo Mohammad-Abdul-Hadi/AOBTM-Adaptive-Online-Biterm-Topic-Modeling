@@ -75,4 +75,4 @@ Indeed, the *runExample.sh* processes the input documents in 4 steps.
 - The whole work is based on the following github repo:
 > https://github.com/xiaohuiyan/OnlineBTM
 
-If you have any questions, feel free to contact: [Mohammad Abdul Hadi](hadi@alumni.ubc.ca).
+If you have any questions, feel free to contact: [Mohammad Abdul Hadi](https://sites.google.com/view/mohammad-hadi/).
