@@ -177,6 +177,10 @@ void OBTM::prepare_final_day() {
       }
   }
 
+//  for(i = 0; i < beta.rows(); ++i)
+//    for(j = 0; j < beta.cols(); ++j)
+//      beta_new[i][j] = (0.5 * beta[i][j]) + (0.5 * beta_new[i][j]);
+
   beta_new += nwz.toDouble() * lam;
   beta = beta_new;
   //beta += nwz.toDouble() * lam;
