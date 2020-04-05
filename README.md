@@ -1,10 +1,11 @@
-# Code of Online Biterm Topic Model
+# Code of Adaptive Online Biterm Topic Model
 
-  The package contains two online algorithms for Biterm Topic Model (BTM): online BTM (oBTM) and incremental BTM (iBTM). oBTM fits an individual BTM in a time slice by using the sufficient statistics as Dirichlet priors; iBTM trains a single model over a biterm stream using incremental Gibbs sampler.
+  The package contains Adaptive online algorithms for Biterm Topic Model (BTM): Ada online BTM (AoBTM). AoBTM fits an individual BTM in a time slice by using the sufficient statistics as Dirichlet priors; it also takes window-size(w) into account to make the most recent version/time slice dependent on the previous w number of time-slices/versions.
 
-More detail can be referred to the following paper:
+More details can be referred to the following papers:
 
    > Xueqi Cheng, Xiaohui Yan, Yanyan Lan, and Jiafeng Guo. BTM: Topic Modeling over Short Texts. TKDE, 2014. 
+   > Cuiyun Gao, Jichuan Zeng, Michael R. Lyu, and Irwin King. Online App Review Analysis for Identifying Emerging Issues
 
 ## Usage ##
 
@@ -31,13 +32,14 @@ Indeed, the *runExample.sh* processes the input documents in 4 steps.
 
 **2. Topic learning** 
 
-       $ ./src/run obtm <K> <W> <alpha> <beta> <n_iter> <docs_dir> <model_dir>
+       $ ./src/run obtm <K> <W> <alpha> <beta> <win> <n_iter> <docs_dir> <model_dir>
        or
        $ ./src/run ibtm <K> <W> <alpha> <beta> <n_iter> <docs_dir> <model_dir> <win> <n_rej>
     	K	int, number of topics
     	W	int, size of vocabulary
     	alpha	double, Symmetric Dirichlet prior of P(z), like 1
     	beta	double, Symmetric Dirichlet prior of P(w|z), like 0.01
+	win	window-size (number of previous versions to depend on)
     	docs_dir    string, path of training docs
     	model_dir	string, path of output directory
         win     int, windows size of incremental Gibbs sampler
@@ -69,8 +71,8 @@ Indeed, the *runExample.sh* processes the input documents in 4 steps.
 	     voca_pt    the vocabulary file
 
 
-## History ##
-- 2015-01-12, v0.5, improve the usability of the code
-- 2013-09-25, v0.1
+## Citation ##
+- The whole work is based on the following github repo:
+> https://github.com/xiaohuiyan/OnlineBTM
 
-If you have any questions, feel free to contact: [Xiaohui Yan](http://shortext.org "Xiaohui Yan")(xhcloud@gmail.com).
+If you have any questions, feel free to contact: [Mohammad Abdul Hadi](hadi@alumni.ubc.ca).
