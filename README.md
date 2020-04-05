@@ -5,7 +5,7 @@
 More details can be referred to the following papers:
 
    > Xueqi Cheng, Xiaohui Yan, Yanyan Lan, and Jiafeng Guo. BTM: Topic Modeling over Short Texts. TKDE, 2014. 
-   > Cuiyun Gao, Jichuan Zeng, Michael R. Lyu, and Irwin King. Online App Review Analysis for Identifying Emerging Issues
+   > Cuiyun Gao, Jichuan Zeng, Michael R. Lyu, and Irwin King. Online App Review Analysis for Identifying Emerging Issues. ICSE, 2018.
 
 ## Usage ##
 
