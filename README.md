@@ -32,18 +32,18 @@ Indeed, the *runExample.sh* processes the input documents in 4 steps.
 
 **2. Topic learning** 
 
-       $ ./src/run obtm <K> <W> <alpha> <beta> <win> <n_iter> <docs_dir> <model_dir>
+       $ ./src/run obtm <K> <W> <alpha> <beta> <w> <n_iter> <docs_dir> <model_dir>
        or
        $ ./src/run ibtm <K> <W> <alpha> <beta> <n_iter> <docs_dir> <model_dir> <win> <n_rej>
     	K	int, number of topics
     	W	int, size of vocabulary
     	alpha	double, Symmetric Dirichlet prior of P(z), like 1
     	beta	double, Symmetric Dirichlet prior of P(w|z), like 0.01
-	win	window-size (number of previous versions to depend on)
+	w	window-size (number of previous versions to depend on)
     	docs_dir    string, path of training docs
     	model_dir	string, path of output directory
-        win     int, windows size of incremental Gibbs sampler
-        n_rej   int, rejuvenation sequence size of incremental Gibbs sampler
+	win     int, windows size of incremental Gibbs sampler
+	n_rej   int, rejuvenation sequence size of incremental Gibbs sampler
 
    The results will be written into the directory "model_dir":   
    - k20.pw_z: a K*M matrix for P(w|z), suppose K=20   
