@@ -1,5 +1,7 @@
 # Code of Adaptive Online Biterm Topic Model
 
+  This framework takes reviews of different versions as input. To track the topic variations over versions, a novel method AOBTM (Adaptively Online Biterm Topic Modeling) is employed for generating version-sensitive topic distributions. The emerging topics are then identified based on the typical anomaly detection method. To make the topics comprehensible, the framework labels each topic with the most relevant phrases and sentences based on an effective ranking scheme considering semantic relevance. The prioritized topic labels are the app issues identified. Finally, it visualizes the variations of app issues along with versions, and highlights the emerging ones for better understanding. (70% done)
+	
   The package contains Adaptive online algorithms for Biterm Topic Model (BTM): Ada online BTM (AoBTM). AoBTM fits an individual BTM in a time slice by using the sufficient statistics as Dirichlet priors; it also takes window-size(w) into account to make the most recent version/time slice dependent on the previous w number of time-slices/versions.
 
 More details can be referred to the following papers:
