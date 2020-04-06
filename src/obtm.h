@@ -1,7 +1,7 @@
 /**
- * OBTM model of online BTM
- * Author: Xiaohui Yan(xhcloud@gmail.com)
- * 2013-6-6
+ * AOBTM model of Adaptive online BTM
+ * Authors: Xiaohui Yan(xhcloud@gmail.com), Mohammad Abdul Hadi(hadi@alumni.ubc.ca)
+ * 2013-6-6, 2020-3-15
  */
 #ifndef _OBTM_H
 #define _OBTM_H

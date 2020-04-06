@@ -1,8 +1,8 @@
 /*
  * (dense) Positive Matrix, each row is a Pvec
  *
- *  Created on: 2012-7-31
- *      Author: xhcloud@gmail.com
+ *  Created on: 2012-7-31, 2020-3-15
+ *  Authors: Xiaohui Yan(xhcloud@gmail.com), Mohammad Abdul Hadi(hadi@alumni.ubc.ca)
  */
 #ifndef _PMAT_H
 #define _PMAT_H

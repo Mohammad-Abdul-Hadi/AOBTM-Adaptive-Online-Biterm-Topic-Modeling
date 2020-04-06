@@ -1,7 +1,7 @@
 /**
  * IBTM algorithm of online BTM
- * Author: Xiaohui Yan(xhcloud@gmail.com)
- * 2013-6-6
+ * Authors: Xiaohui Yan(xhcloud@gmail.com), Mohammad Abdul Hadi(hadi@alumni.ubc.ca)
+ * 2013-6-6, 2020-3-15
  */
 #ifndef _IBTM_H
 #define _IBTM_H
