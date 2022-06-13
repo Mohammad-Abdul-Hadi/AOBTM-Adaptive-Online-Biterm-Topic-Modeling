@@ -20,7 +20,7 @@ voca_pt=${output_dir}voca.txt
 method=obtm   # must be obtm or ibtm
 
 echo "=============== Index Docs ============="
-python indexDocs.py $input_dir $dwid_dir $voca_pt
+python2 indexDocs.py $input_dir $dwid_dir $voca_pt
 
 ## learning parameters p(z) and p(z|w)
 echo "=============== Topic Learning ============="
@@ -48,5 +48,5 @@ done
 # echo "================ Topic Display ============="
 for day in `seq 0 $[$n_day-1]`; do
 	echo "---------- day $day --------------"
-	python topicDisplay.py $model_dir $K $day $voca_pt
+	python2 topicDisplay.py $model_dir $K $day $voca_pt
 done
