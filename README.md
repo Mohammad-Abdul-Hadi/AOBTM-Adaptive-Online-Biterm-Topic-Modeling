@@ -14,7 +14,7 @@ More details can be referred to the following papers:
 
 ## Usage ##
 
-Please use Python 2 for usinf this implemetation.
+**Please use Python 2 for using this implemetation.**
 
 The code includes a runnable example, you can run it by:
 
