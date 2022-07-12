@@ -327,3 +327,37 @@ f.close()
 with open('probability_dict_biterms_sliding_window_10.json', 'w') as f:
     json.dump(pdbsw10, f)
 f.close()
+
+# calculate PMI Score
+import math
+
+T = 10 # change it as per your convenience
+
+file1 = open('k2.day0.pw_z', 'r')
+Lines = file1.readlines()
+
+pmi_scores = []
+
+for line in Lines:
+    lst = list(map(int, line.split(" ")))
+    max_values = sorted(lst)[-T]
+    
+    lst = list(map(int, line.split(" ")))
+    max_indices = []
+    if len(max_indices) == 0:
+        max_indices.append(lst.index(max_values[0], 0, len(lst))
+    else:
+        for i in range(1, len(max_values)):
+            max_indices.append(lst.index(max_values[i], max_indices[-1], len(lst))
+
+    # Using readlines()
+    file2 = open('voca.txt', 'r')
+    words = file2.readlines()
+
+    sum = 0
+    for i in range(len(max_indices) - 1):
+        for j in range(i+1, len(max_indices)):
+            term = words[i] + "_" + words[j]
+            sum += math.log(pdbsw10 / (pdt[words[i]] * pdt[words[j]]))
+    
+    pmi_scores.append(sum / (T * (T-1)))
