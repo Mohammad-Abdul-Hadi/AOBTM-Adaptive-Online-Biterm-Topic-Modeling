@@ -38,7 +38,7 @@ fi
 
 # ## infer p(z|d) for each doc
 echo "================ Infer P(z|d)==============="
-for day in `seq 0 $[$n_day-1]`; do
+for day in `seq 0 $(( $n_day-1 ))`; do
 	dwid_pt=${dwid_dir}${day}.txt
 	echo "../src/infer sum_b $K $day $dwid_pt $model_dir"
 	../src/infer sum_b $K $day $dwid_pt $model_dir
@@ -46,7 +46,7 @@ done
 
 # ## output top words of each topic
 # echo "================ Topic Display ============="
-for day in `seq 0 $[$n_day-1]`; do
+for day in `seq 0 $(( $n_day-1 ))`; do
 	echo "---------- day $day --------------"
 	python2 topicDisplay.py $model_dir $K $day $voca_pt
 done
